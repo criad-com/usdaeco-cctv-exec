@@ -1,0 +1,96 @@
+{
+  "version": "0.2.1",
+  "licence": "MIT",
+  "gate": {
+    "total": 53,
+    "passed": 53,
+    "failed": 0,
+    "not_run": 0
+  },
+  "gateWithoutNativeArtifacts": {
+    "total": 53,
+    "passed": 32,
+    "failed": 0,
+    "not_run": 21
+  },
+  "structure": {
+    "rules": 28,
+    "failed": 0
+  },
+  "coreValidators": {
+    "executed": 8,
+    "errors": 0,
+    "otherFindings": 0
+  },
+  "pytest": {
+    "passed": 24,
+    "seconds": 2.26
+  },
+  "pytestWithoutNativeArtifacts": {
+    "passed": 10,
+    "deselected": 14,
+    "status": "NOT RUN",
+    "reason": "usd-dev consumer and installed exec plugin descriptor are missing"
+  },
+  "native": {
+    "claims": 21,
+    "passed": 21,
+    "build": "local CMake against cached usd-dev",
+    "openusd": "47154dc7b5e28df623745495a7a508b69535ba24",
+    "linkedPython": "3.14.6",
+    "parityUSD": "26.8",
+    "platform": "macOS ARM64",
+    "lobbyRecords": 8,
+    "bakedRecords": 8,
+    "orphanRecords": 8,
+    "maxWorldPointDeviation": 7.105427357601002e-15,
+    "maxBakedPointDeviation": 8.445743162610597e-07,
+    "maxOrphanDeviation": 1.9539925233402755e-14,
+    "otherLobbyDeviations": 0,
+    "pointTolerance": 1e-06,
+    "otherTolerance": 1e-09
+  },
+  "vanillaComposition": {
+    "stages": 2,
+    "passed": 2
+  },
+  "examplePublication": {
+    "applicable": false,
+    "reason": "No example directory; CCTV owns the published example. The local orphan sensor stage is a numeric test fixture."
+  },
+  "termSweep": {
+    "violations": 0
+  },
+  "nix": {
+    "version": "0.2.1",
+    "attempts": 1,
+    "status": "NOT PROVEN",
+    "exit_code": 1,
+    "timed_out": false,
+    "seconds": 0.447,
+    "mode": "offline; exact local source overrides; no substituters or remote builders; max-jobs 0; outbound network denied",
+    "boundary": "Uncached nested toolchain/core input at v0.8.4; input resolution failed with outbound networking denied."
+  },
+  "pins": {
+    "toolchain": {
+      "repo": "usdaeco-toolchain",
+      "library": null,
+      "ref": "v0.3.2"
+    },
+    "aeco-toolchain": {
+      "repo": "aeco-toolchain",
+      "library": null,
+      "ref": "d51bae1cf9023cb58e6aed8d39694a181ffe1899"
+    },
+    "usdaeco-core": {
+      "repo": "usdaeco-core",
+      "library": "usdAeco",
+      "ref": "v0.9.2"
+    },
+    "usdaeco-cctv": {
+      "repo": "usdaeco-cctv",
+      "library": "usdAecoCctv",
+      "ref": "v0.5.2"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "version": "0.2.0",
+  "sourceChecks": {
+    "total": 28,
+    "passed": 28,
+    "failed": 0
+  },
+  "pytest": {
+    "passed": 1,
+    "nativeDeselected": 14
+  },
+  "native": {
+    "status": "NOT RUN",
+    "reason": "offline usd-dev build closure unavailable",
+    "claimsRetained": 21,
+    "previousEvidence": "docs/release-acceptance.json",
+    "previousVersion": "0.1.3",
+    "previousChecks": {
+      "passed": 21,
+      "total": 21
+    },
+    "previousBakedRecords": {
+      "passed": 8,
+      "total": 8
+    }
+  },
+  "nix": {
+    "attempts": 1,
+    "status": "NOT PROVEN",
+    "exit_code": 1,
+    "timed_out": false,
+    "seconds": 2.318,
+    "mode": "offline; local registry/source overrides; no substituters or remote builders; max-jobs 0"
+  },
+  "termSweep": {
+    "violations": 0
+  },
+  "pins": {
+    "toolchain": {
+      "repo": "usdaeco-toolchain",
+      "library": null,
+      "ref": "v0.2.1"
+    },
+    "aeco-toolchain": {
+      "repo": "aeco-toolchain",
+      "library": null,
+      "ref": "d51bae1cf9023cb58e6aed8d39694a181ffe1899"
+    },
+    "usdaeco-core": {
+      "repo": "usdaeco-core",
+      "library": "usdAeco",
+      "ref": "v0.9.1"
+    },
+    "usdaeco-cctv": {
+      "repo": "usdaeco-cctv",
+      "library": "usdAecoCctv",
+      "ref": "v0.5.0"
+    }
+  }
+}

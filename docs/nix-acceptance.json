@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "attempts": 1,
+  "status": "NOT PROVEN",
+  "exit_code": 1,
+  "timed_out": false,
+  "seconds": 0.447,
+  "mode": "offline; exact local source overrides; no substituters or remote builders; max-jobs 0; outbound network denied",
+  "boundary": "Uncached nested toolchain/core input at v0.8.4; input resolution failed with outbound networking denied."
+}

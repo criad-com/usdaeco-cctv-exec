@@ -1,0 +1,10 @@
+/build/
+/result*
+/flake.lock
+/STEERING.md
+/artifacts/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+/out/

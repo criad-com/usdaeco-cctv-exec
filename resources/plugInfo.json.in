@@ -1,0 +1,20 @@
+{
+    "Plugins": [
+        {
+            "Name": "execAecoCctv",
+            "Type": "library",
+            "Root": ".",
+            "ResourcePath": ".",
+            "LibraryPath": "@PLUGIN_LIBRARY@",
+            "Info": {
+                "aeco": @AECO_METADATA@,
+                "Exec": {
+                    "Schemas": {
+                        "UsdAecoCctvSensorAPI": {"allowsPluginComputations": true},
+                        "UsdAecoCctvCameraAPI": {"allowsPluginComputations": true}
+                    }
+                }
+            }
+        }
+    ]
+}

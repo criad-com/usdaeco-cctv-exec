@@ -1,0 +1,80 @@
+#usda 1.0
+(
+    doc = """Sensors whose parent is a plain Xform placed with xformOp:transform:
+    computeSensorToWorld must fall back to execGeom's computeLocalToWorldTransform
+    of the ancestors when no camera element (AecoCctvCameraAPI) is above them.
+    Sensor_2 is a fisheye head and Sensor_3 a radar head (detection dome)."""
+    defaultPrim = "Rig"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "Rig"
+{
+    matrix4d xformOp:transform = ( (0.8660254037844387, 0.5, 0, 0), (-0.5, 0.8660254037844387, 0, 0), (0, 0, 1, 0), (2, 1, 0.5, 1) )
+    uniform token[] xformOpOrder = ["xformOp:transform"]
+
+    def Xform "Mast"
+    {
+        matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 4, 1) )
+        uniform token[] xformOpOrder = ["xformOp:transform"]
+
+        def Camera "Sensor_0" (
+            prepend apiSchemas = ["AecoCctvSensorAPI"]
+        )
+        {
+            double2 aeco:cctvSensor:focalRange = (2.8, 12)
+            double2 aeco:cctvSensor:sensorSize = (5.76, 3.24)
+            int2 aeco:cctvSensor:pixels = (1920, 1080)
+            double3 aeco:cctvSensor:offset = (0.1, 0, 0.2)
+            double aeco:cctvSensor:focalLength = 4
+            double aeco:cctvSensor:pan = 30
+            double aeco:cctvSensor:tilt = 10
+            double aeco:cctvSensor:roll = 0
+            double aeco:cctvSensor:range = 0
+            double aeco:cctvSensor:targetDensity = 62.5
+        }
+
+        def Camera "Sensor_1" (
+            prepend apiSchemas = ["AecoCctvSensorAPI"]
+        )
+        {
+            double2 aeco:cctvSensor:focalRange = (2.8, 12)
+            double2 aeco:cctvSensor:sensorSize = (5.76, 3.24)
+            int2 aeco:cctvSensor:pixels = (1920, 1080)
+            double aeco:cctvSensor:focalLength = 12
+            double aeco:cctvSensor:pan = -120
+            double aeco:cctvSensor:tilt = -5
+            double aeco:cctvSensor:roll = 90
+            double aeco:cctvSensor:range = 30
+        }
+
+        def Camera "Sensor_2" (
+            prepend apiSchemas = ["AecoCctvSensorAPI"]
+        )
+        {
+            uniform token aeco:cctvSensor:projection = "fisheye"
+            double2 aeco:cctvSensor:focalRange = (1.6, 1.6)
+            double2 aeco:cctvSensor:hfovRange = (185, 185)
+            double2 aeco:cctvSensor:vfovRange = (180, 180)
+            int2 aeco:cctvSensor:pixels = (2048, 2048)
+            double aeco:cctvSensor:pan = 0
+            double aeco:cctvSensor:tilt = 90
+            double aeco:cctvSensor:range = 8
+        }
+
+        def Camera "Sensor_3" (
+            prepend apiSchemas = ["AecoCctvSensorAPI"]
+        )
+        {
+            uniform token aeco:cctvSensor:spectrum = "radar"
+            double2 aeco:cctvSensor:focalRange = (1, 1)
+            double2 aeco:cctvSensor:hfovRange = (120, 120)
+            double2 aeco:cctvSensor:vfovRange = (50, 50)
+            int2 aeco:cctvSensor:pixels = (0, 0)
+            double aeco:cctvSensor:pan = 180
+            double aeco:cctvSensor:tilt = 15
+            double aeco:cctvSensor:range = 50
+        }
+    }
+}

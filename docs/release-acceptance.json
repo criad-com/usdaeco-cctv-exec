@@ -1,0 +1,213 @@
+{
+  "checks": [
+    {
+      "name": "manifest",
+      "ok": true,
+      "detail": "execAecoCctv 0.1.3 tier exec requires {'usdAeco': '>=0.8.1,<0.9', 'usdAecoCctv': '>=0.4.5,<0.5'}"
+    },
+    {
+      "name": "installed plugin",
+      "ok": true,
+      "detail": "libexecAecoCctv.dylib, Info.aeco == library.json"
+    },
+    {
+      "name": "exec plugin metadata",
+      "ok": true,
+      "detail": "Exec.Schemas declares UsdAecoCctvCameraAPI, UsdAecoCctvSensorAPI"
+    },
+    {
+      "name": "dependency plugins",
+      "ok": true,
+      "detail": "usdAeco 0.8.4 (registers aecoDerived), usdAecoCctv 0.4.8 (registers both types)"
+    },
+    {
+      "name": "consumer run",
+      "ok": true,
+      "detail": "STAGE PASS 4 sensors, 6 computations, pan invalidation exact"
+    },
+    {
+      "name": "sensors evaluated",
+      "ok": true,
+      "detail": "4 sensors x 6 computations x 2 phases"
+    },
+    {
+      "name": "lobby parity computeEffectiveWidth",
+      "ok": true,
+      "detail": "max |dev| 0.000e+00 <= 1e-09 over 8 records (derive)"
+    },
+    {
+      "name": "lobby parity computeFieldOfView",
+      "ok": true,
+      "detail": "max |dev| 0.000e+00 <= 1e-09 over 8 records (derive)"
+    },
+    {
+      "name": "lobby parity computeSensorToWorld",
+      "ok": true,
+      "detail": "max |dev| 0.000e+00 <= 1e-09 over 8 records (derive)"
+    },
+    {
+      "name": "lobby parity computeTargetRange",
+      "ok": true,
+      "detail": "max |dev| 0.000e+00 <= 1e-09 over 8 records (derive)"
+    },
+    {
+      "name": "lobby parity computeTargetRangeArc",
+      "ok": true,
+      "detail": "max |dev| 0.000e+00 <= 1e-09 over 8 records (derive)"
+    },
+    {
+      "name": "lobby parity computeSectorPoints",
+      "ok": true,
+      "detail": "max |dev| 7.105e-15 <= 1e-06 over 8 records (derive)"
+    },
+    {
+      "name": "lobby parity with the baked derived layer",
+      "ok": true,
+      "detail": "derived layer vs exec over 8 records: EffectiveWidth 0.0e+00, FieldOfView 0.0e+00, SensorToWorld 0.0e+00, TargetRange 0.0e+00, SectorPoints 8.4e-07"
+    },
+    {
+      "name": "invalidation",
+      "ok": true,
+      "detail": "edited sensor: matrix and points changed, nothing else did"
+    },
+    {
+      "name": "sector topology",
+      "ok": true,
+      "detail": "[376] points per sector (expect 376), apex at the sensor within 0.0e+00 m"
+    },
+    {
+      "name": "orphan consumer run",
+      "ok": true,
+      "detail": "STAGE PASS 4 sensors, 6 computations, pan invalidation exact"
+    },
+    {
+      "name": "orphan parity",
+      "ok": true,
+      "detail": "execGeom ancestor frame, fisheye and radar heads: max |dev| 1.954e-14 over 8 records"
+    },
+    {
+      "name": "orphan sensors: derivation skips, exec evaluates",
+      "ok": true,
+      "detail": "derivation wrote 0 sensors (no camera element), exec evaluated 4"
+    },
+    {
+      "name": "vanilla USD [B7]",
+      "ok": true,
+      "detail": "2 stages: complete fallbacks, identical authored values and world transforms"
+    },
+    {
+      "name": "term sweep",
+      "ok": true,
+      "detail": "no private addresses or local paths in committed text"
+    },
+    {
+      "name": "links",
+      "ok": true,
+      "detail": "README and docs links resolve"
+    }
+  ],
+  "failed": 0,
+  "version": "0.1.3",
+  "runtime": {
+    "platform": "macOS ARM64",
+    "python": "3.14.6",
+    "numpy": "2.5.1",
+    "pytest": "9.1.1",
+    "openusd": "47154dc7b5e28df623745495a7a508b69535ba24",
+    "pythonEnvironment": "Owned virtual environment with cached NumPy and locally installed pure Python test dependencies; plugin autoload disabled."
+  },
+  "pytest": {
+    "passed": 15,
+    "seconds": 5.1
+  },
+  "parity": {
+    "reference": "derive",
+    "state": {
+      "records": 8,
+      "deviations": {
+        "computeEffectiveWidth": 0.0,
+        "computeFieldOfView": 0.0,
+        "computeSensorToWorld": 0.0,
+        "computeTargetRange": 0.0,
+        "computeTargetRangeArc": 0.0,
+        "computeSectorPoints": 7.105427357601002e-15
+      }
+    },
+    "baked": {
+      "records": 8,
+      "deviations": {
+        "computeEffectiveWidth": 0.0,
+        "computeFieldOfView": 0.0,
+        "computeSensorToWorld": 0.0,
+        "computeTargetRange": 0.0,
+        "computeSectorPoints": 8.445743162610597e-07
+      }
+    },
+    "orphan": {
+      "records": 8,
+      "deviations": {
+        "computeEffectiveWidth": 0.0,
+        "computeFieldOfView": 0.0,
+        "computeSensorToWorld": 0.0,
+        "computeTargetRange": 0.0,
+        "computeTargetRangeArc": 0.0,
+        "computeSectorPoints": 1.9539925233402755e-14
+      }
+    },
+    "tolerances": {
+      "points_m": 1e-06,
+      "other_values": 1e-09
+    }
+  },
+  "nix": {
+    "attempts": 1,
+    "exit_code": 1,
+    "timed_out": false,
+    "seconds": 17.938,
+    "status": "not proven",
+    "evaluation": "Packages, check and development shell evaluated with explicit source overrides; cached processing-toolchain, Nixpkgs and OpenUSD source hashes match the lock.",
+    "boundary": "Offline --max-jobs 0 and disabled remote builders prevented the new exec derivation from building; no second attempt.",
+    "outboundNetwork": "denied",
+    "substituters": "disabled"
+  },
+  "dependencies": [
+    {
+      "repository": "usdaeco-core",
+      "ref": "v0.8.4",
+      "revision": "c818a1533bcfe36be47845252388a1c732ec69c0",
+      "rebuiltResourcesEqualCommitted": true,
+      "resources": {
+        "plugins/usdAeco/resources/generatedSchema.usda": "d1c19403ee59d873e2b3e451aef2023377fdd942d052cd3054b10eb276c4de98",
+        "plugins/usdAeco/resources/plugInfo.json": "42c32e93999bf4a27af6cfe576c068ae2778509e5275378e4efa14958bedc6bd",
+        "plugins/usdAeco/resources/usdAeco/schema.usda": "6bfa4e1f25cd7ddff92a37b4c699d380e1f46c014d39d2196d8ae6b28321e343"
+      }
+    },
+    {
+      "repository": "usdaeco-cctv",
+      "ref": "v0.4.8",
+      "revision": "20c569d3ed43cc00513a662be9baa0f018d3c2bf",
+      "rebuiltResourcesEqualCommitted": true,
+      "resources": {
+        "plugins/usdAecoCctv/resources/generatedSchema.usda": "180db462bbda40f3ac14e3bdf53daa3c639f3fdf83a43df7095bd854da9fe1b8",
+        "plugins/usdAecoCctv/resources/plugInfo.json": "26c00eb7813fb09c56398404a11742e7b126db6a2c711d0b0f3fe4a1eb4296b7",
+        "plugins/usdAecoCctv/resources/usdAecoCctv/schema.usda": "12cd54ff2a6f6665d71d5c221629ee09a1e36784f9618215188075990193d21c"
+      }
+    }
+  ],
+  "hygiene": {
+    "sanitization": {
+      "files": 19,
+      "violations": [],
+      "passed": true
+    },
+    "linkRoots": 3,
+    "linkRootsPassed": 3,
+    "sanitizedConsumerArtifacts": {
+      "files": 2,
+      "violations": [],
+      "passed": true,
+      "normalization": "Stage identifiers use repository-relative paths; numeric records and edits unchanged."
+    },
+    "localLinks": 13
+  }
+}
