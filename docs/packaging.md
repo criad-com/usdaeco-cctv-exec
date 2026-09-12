@@ -2,8 +2,8 @@
 
 These measurements apply only to **CCTV v0.4.8**, **core v0.8.4** and the
 OpenUSD development revision recorded in [release-acceptance.json](release-acceptance.json).
-They do not describe the current dependency pins. See [current acceptance](migration.md)
-for v0.2.1 and the [README](../README.md#build-and-check) for current commands.
+They do not describe the current dependency pins. See [current acceptance](public-pins.md)
+for v0.2.4 and the [README](../README.md#build-and-check) for current commands.
 The repository is now licensed under [MIT](../LICENSE).
 
 Both codeless dependency plugins were rebuilt with USD 26.8; their six

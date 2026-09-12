@@ -3,22 +3,26 @@
     "toolchain": {
       "repo": "usdaeco-toolchain",
       "library": null,
-      "ref": "v0.3.8"
+      "ref": "v0.3.10",
+      "revision": "59d3da5ff5114089b54efaaae38efdd7fe1b8e73"
     },
     "aeco-toolchain": {
       "repo": "aeco-toolchain",
       "library": null,
-      "ref": "d51bae1cf9023cb58e6aed8d39694a181ffe1899"
+      "ref": "v0.4.0",
+      "revision": "71c86d54aa1e4be180a301a089d9a40e727758cb"
     },
     "usdaeco-core": {
       "repo": "usdaeco-core",
       "library": "usdAeco",
-      "ref": "v0.9.2"
+      "ref": "v0.9.4",
+      "revision": "80a099e14e7bb825b207548d0a4f8a93e9ffa62f"
     },
     "usdaeco-cctv": {
       "repo": "usdaeco-cctv",
       "library": "usdAecoCctv",
-      "ref": "v0.5.2"
+      "ref": "v0.5.5",
+      "revision": "57b5fe4bc6c5668e5c2c234361ee5aebb25bff4f"
     }
   },
   "fixtures": {

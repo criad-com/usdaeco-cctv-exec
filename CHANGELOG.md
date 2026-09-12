@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.2.4
+
+- public re-pin: aeco-toolchain v0.4.0, usdaeco-toolchain v0.3.10, core v0.9.4 and CCTV v0.5.5. Record exact checked revisions alongside the public release tags.
+- Keep the existing requirement ranges; both schema pins remain compatible.
+- Rebuild the native plugin: 54 checks pass, including all 21 native claims and eight core validators; 24 pytest cases pass. The regenerated lobby differs only in 13 upstream version stamps, with byte-identical geometry and other opinions.
+- Record the single offline Nix attempt as not proven: package, check and dev-shell evaluation succeeded, but an uncached dependency needed a builder while local jobs were disabled. See [acceptance](docs/public-pins.md).
+
 ## 0.2.3
 
 - Public names → github.com/criad-com.

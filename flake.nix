@@ -2,13 +2,13 @@
   description = "execAecoCctv: OpenExec computations for the codeless usdAecoCctv sensor schema";
 
   inputs = {
-    aeco-toolchain.url = "github:criad-com/aeco-toolchain?ref=d51bae1cf9023cb58e6aed8d39694a181ffe1899";
-    toolchain.url = "github:criad-com/usdaeco-toolchain?ref=v0.3.8";
+    aeco-toolchain.url = "github:criad-com/aeco-toolchain?ref=v0.4.0";
+    toolchain.url = "github:criad-com/usdaeco-toolchain?ref=v0.3.10";
     toolchain.inputs.aeco-toolchain.follows = "aeco-toolchain";
     nixpkgs.follows = "aeco-toolchain/nixpkgs";
-    usdaeco-cctv.url = "github:criad-com/usdaeco-cctv?ref=v0.5.2";
+    usdaeco-cctv.url = "github:criad-com/usdaeco-cctv?ref=v0.5.5";
     usdaeco-cctv.flake = false;
-    usdaeco-core.url = "github:criad-com/usdaeco-core?ref=v0.9.2";
+    usdaeco-core.url = "github:criad-com/usdaeco-core?ref=v0.9.4";
     usdaeco-core.flake = false;
   };
 

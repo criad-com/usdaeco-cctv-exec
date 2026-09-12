@@ -1,7 +1,7 @@
 {
   "name": "usdaeco-cctv-exec",
   "plugin": "execAecoCctv",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "kind": "library",
   "tier": "toolchain",
   "requires": {

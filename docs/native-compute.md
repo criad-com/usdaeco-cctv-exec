@@ -6,13 +6,13 @@ and recomputes after edits. It authors no USD data. The codeless library
 never depends on this plugin; its Python derivation and baked layers remain
 the portable interchange path.
 
-The current dependency pins are core **v0.9.2**, CCTV **v0.5.2** and the
-processing toolchain's OpenUSD dev **47154dc** build (26.11 dev, Python 3.14).
+The current dependency pins are core **v0.9.4**, CCTV **v0.5.5** and the
+aeco-toolchain **v0.4.0** OpenUSD dev **47154dc** build (26.11 dev, Python 3.14).
 Exact refs are in [dependencies.json](../dependencies.json); supported ranges
-are `usdAeco >=0.9.2,<1.0` and `usdAecoCctv >=0.5.2,<0.6`. Native execution at
-these pins is **NOT RUN** without the development closure. The fresh v0.2.1
-[acceptance](migration.md) includes a local native rebuild and parity run;
-the older v0.1.3 evidence remains separately labelled.
+are `usdAeco >=0.9.2,<1.0` and `usdAecoCctv >=0.5.2,<0.6`. The v0.2.4
+[acceptance](public-pins.md) includes a local native rebuild and parity run
+with usdaeco-toolchain v0.3.10. Without the development closure, native rows
+remain **NOT RUN**. Earlier release evidence remains separately labelled.
 This plugin supplies no schema or validation library; those belong to CCTV.
 
 ## Build and check
@@ -102,9 +102,9 @@ The plugin does not implement the full validation contract.
 
 ## Checks and measured scope
 
-The v0.2.1 native build uses macOS ARM64 and usd-dev `47154dc` with its
+The v0.2.4 native build uses macOS ARM64 and usd-dev `47154dc` with its
 Python 3.14 linkage. Python parity and core validation use USD 26.8 in a
-separate process. [Current acceptance](migration.md) records 53 gate rows and
+separate process. [Current acceptance](public-pins.md) records 54 gate rows and
 24 pytest passes. [Historical acceptance](packaging.md) preserves v0.1.3.
 See the [changelog](../CHANGELOG.md) for release changes.
 The v0.1.1 Nix build/check passed with explicit input overrides; that
@@ -208,4 +208,4 @@ Camera/guide Mesh layers; plugin-free composition is the B7 contract.
 The current native plugin was rebuilt from this tree. Core and CCTV use their
 committed source plugins. Parity detaches its derived output between edit
 phases as required by the output-safety contract. C++ computations are unchanged.
-See [current acceptance](migration.md) for the measured checks and single Nix attempt.
+See [current acceptance](public-pins.md) for the measured checks and single Nix attempt.

@@ -34,4 +34,4 @@ No viewer adapter, live video, study-wide occlusion engine or new schema is supp
 
 ## 9 Status
 
-Version 0.2.3 uses MIT and public names under `github.com/criad-com`, with toolchain 0.3.8. Train aeco-0.7.0 pins for core 0.9.2 and CCTV 0.5.2 are unchanged. Native computation source is unchanged. Current verification is in the [README](../README.md#status); [v0.2.1 migration acceptance](migration.md) remains historical.
+Version 0.2.4 pins public release tags: aeco-toolchain v0.4.0, usdaeco-toolchain v0.3.10, core v0.9.4 and CCTV v0.5.5. Requirement ranges and native computation source are unchanged. The local native rebuild passes 54 checks and 24 pytest cases; [current acceptance](public-pins.md) records the provenance comparison and the single unproven Nix attempt. [v0.2.1 migration acceptance](migration.md) remains historical.

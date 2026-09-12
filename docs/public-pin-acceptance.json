@@ -1,0 +1,152 @@
+{
+  "version": "0.2.4",
+  "pins": {
+    "toolchain": {
+      "repo": "usdaeco-toolchain",
+      "library": null,
+      "ref": "v0.3.10",
+      "revision": "59d3da5ff5114089b54efaaae38efdd7fe1b8e73"
+    },
+    "aeco-toolchain": {
+      "repo": "aeco-toolchain",
+      "library": null,
+      "ref": "v0.4.0",
+      "revision": "71c86d54aa1e4be180a301a089d9a40e727758cb"
+    },
+    "usdaeco-core": {
+      "repo": "usdaeco-core",
+      "library": "usdAeco",
+      "ref": "v0.9.4",
+      "revision": "80a099e14e7bb825b207548d0a4f8a93e9ffa62f"
+    },
+    "usdaeco-cctv": {
+      "repo": "usdaeco-cctv",
+      "library": "usdAecoCctv",
+      "ref": "v0.5.5",
+      "revision": "57b5fe4bc6c5668e5c2c234361ee5aebb25bff4f"
+    }
+  },
+  "publicTags": {
+    "count": 4,
+    "availability": "supplied release inventory",
+    "sourceTagRevisionsVerified": 4,
+    "onlinePublicResolution": "NOT PROVEN"
+  },
+  "gate": {
+    "total": 54,
+    "passed": 54,
+    "failed": 0,
+    "not_run": 0
+  },
+  "sourceSmokeBeforeBuild": {
+    "total": 54,
+    "passed": 33,
+    "failed": 0,
+    "not_run": 21
+  },
+  "structure": {
+    "rules": 29,
+    "failed": 0,
+    "toolchain": "v0.3.10"
+  },
+  "coreValidators": {
+    "executed": 8,
+    "errors": 0,
+    "otherFindings": 0
+  },
+  "pytest": {
+    "passed": 24,
+    "seconds": 2.45
+  },
+  "native": {
+    "claims": 21,
+    "passed": 21,
+    "build": "documented build.sh against cached usd-dev",
+    "openusd": "47154dc7b5e28df623745495a7a508b69535ba24",
+    "linkedPython": "3.14.6",
+    "parityUSD": "26.8",
+    "platform": "macOS ARM64",
+    "parity": {
+      "reference": "derive",
+      "state": {
+        "records": 8,
+        "deviations": {
+          "computeEffectiveWidth": 0.0,
+          "computeFieldOfView": 0.0,
+          "computeSensorToWorld": 0.0,
+          "computeTargetRange": 0.0,
+          "computeTargetRangeArc": 0.0,
+          "computeSectorPoints": 7.105427357601002e-15
+        }
+      },
+      "baked": {
+        "records": 8,
+        "deviations": {
+          "computeEffectiveWidth": 0.0,
+          "computeFieldOfView": 0.0,
+          "computeSensorToWorld": 0.0,
+          "computeTargetRange": 0.0,
+          "computeSectorPoints": 8.445743162610597e-07
+        }
+      }
+    },
+    "orphanRecords": 8,
+    "pointTolerance": 1e-06,
+    "otherTolerance": 1e-09
+  },
+  "vanillaComposition": {
+    "stages": 2,
+    "passed": 2
+  },
+  "provenance": {
+    "baselineVersion": "0.2.3",
+    "unchangedSourceSHA256": {
+      "src/computations.cpp": "17028c0211cd7e3ccf166ff31eee5ecf258e6d78f23f2e8b6ba76ec876641111",
+      "testenv/execcctv.cpp": "d77c793df3194fab651cfc04c779513c596cb4a40e034a94d5e2a6c20c045406",
+      "testenv/orphan.usda": "5eaa3ee22cac1224b8dfa579fd5b993c200ec60e6fabcf00403f18ae1ab7da7b"
+    },
+    "lobbyInputUnchangedFrom": "v0.5.2",
+    "lobbyDerived": {
+      "command": "env -u PYTHONPATH \"$AECO_PYTHON\" \"$CCTV_ROOT/tools/aeco-cctv\" derive artifacts/provenance/lobby.usda -o artifacts/provenance/lobby.derived.usda",
+      "sha256": "200bde5b1504f7486845ce015604451ba8843e847ffbbdd608591f46c4e8ccbe",
+      "bytes": 514563,
+      "matchesPinnedLayer": true,
+      "baselineRef": "v0.5.2",
+      "baselineSHA256": "91b4591ca180c228d95eb8a9e05ae17958d4f8207ab0377a5c14e7b53c80d241",
+      "onlyDifference": "usdAecoCctv derive 0.5.2 -> usdAecoCctv derive 0.5.5",
+      "stampReplacements": 13,
+      "equalAfterStampReplacement": true,
+      "geometryAndOtherOpinionsByteIdentical": true
+    },
+    "examplePublication": {
+      "applicable": false,
+      "reason": "This schema-free library has no publication runner, result bundle or render. CCTV owns the published examples; its lobby was re-derived in a disposable copy."
+    }
+  },
+  "nix": {
+    "version": "0.2.4",
+    "attempts": 1,
+    "status": "NOT PROVEN",
+    "exit_code": 1,
+    "timed_out": false,
+    "seconds": 12.236,
+    "mode": "offline; exact local source overrides; no lock writes, substituters or remote builders; max-jobs 0",
+    "boundary": "Package, check and dev-shell evaluation succeeded; an uncached add-flags.sh build dependency needed a builder with max-jobs 0, no substituters and no remote builders.",
+    "overrides": {
+      "aeco-toolchain": "v0.4.0",
+      "toolchain": "v0.3.10",
+      "usdaeco-core": "v0.9.4",
+      "usdaeco-cctv": "v0.5.5",
+      "toolchain/core": "v0.9.2"
+    }
+  },
+  "repositoryChecks": {
+    "diffCheck": "PASS",
+    "obsoletePublicOwnerRefs": 0,
+    "termViolations": 0,
+    "finalDocumentationAndStructure": {
+      "checks": 31,
+      "failed": 0
+    }
+  }
+}
